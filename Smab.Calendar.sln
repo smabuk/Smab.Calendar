@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smab.Calendar", "src\Smab.Calendar\Smab.Calendar.csproj", "{305EFFB0-1417-43EA-BCAF-27045D45D98A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDemo", "samples\WebDemo\WebDemo.csproj", "{A3372137-D195-408A-93A9-CA7BFD33B47D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{305EFFB0-1417-43EA-BCAF-27045D45D98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305EFFB0-1417-43EA-BCAF-27045D45D98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305EFFB0-1417-43EA-BCAF-27045D45D98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305EFFB0-1417-43EA-BCAF-27045D45D98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3372137-D195-408A-93A9-CA7BFD33B47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3372137-D195-408A-93A9-CA7BFD33B47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3372137-D195-408A-93A9-CA7BFD33B47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3372137-D195-408A-93A9-CA7BFD33B47D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {060C0F40-A7B3-413B-A54B-4DDB9C223C9C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.0</TargetFramework>
+	  <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+	  <TieredCompilation>true</TieredCompilation>
+	  <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Smab.Calendar\Smab.Calendar.csproj" />
+  </ItemGroup>
+
+</Project>
