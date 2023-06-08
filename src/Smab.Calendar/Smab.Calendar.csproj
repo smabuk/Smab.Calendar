@@ -1,33 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
-    <TieredCompilation>true</TieredCompilation>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>11</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <PackageId>Smab.Calendar</PackageId>
-    <Title>Smab.Calendar</Title>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Simon Brookes (@smabuk)</Authors>
-    <Company></Company>
-    <Description>Package to create ical format streams</Description>
-    <Summary>Package to create ical format streams</Summary>
-    <PackageProjectUrl>https://github.com/smabuk/Smab.Calendar</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/smabuk/Smab.Calendar</RepositoryUrl>
-    <PackageTags>calendar, ical</PackageTags>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <Preview></Preview>
-    <VersionSuffix Condition="'$(Preview)' != ''">$(Preview).$([System.DateTime]::get_Now().get_Year())$([System.DateTime]::get_Now().get_Month().ToString("D2"))$([System.DateTime]::get_Now().get_Day().ToString("D2"))-$([System.DateTime]::get_Now().get_Hour().ToString("D2"))$([System.DateTime]::get_Now().get_Minute().ToString("D2"))</VersionSuffix>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <RootNamespace>Smab.Calendar</RootNamespace>
-    <Product>Smab.Calendar</Product>
-    <AssemblyName>Smab.Calendar</AssemblyName>
-  </PropertyGroup>
+	<PropertyGroup>
+		<PackageId>Smab.Calendar</PackageId>
+		<Title>Smab.Calendar</Title>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Authors>Simon Brookes (@smabuk)</Authors>
+		<Company></Company>
+		<Description>Package to create ical format streams</Description>
+		<Summary>Package to create ical format streams</Summary>
+		<PackageProjectUrl>https://github.com/smabuk/Smab.Calendar</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/smabuk/Smab.Calendar</RepositoryUrl>
+		<PackageTags>calendar, ical</PackageTags>
+		<PackageReleaseNotes>Language update</PackageReleaseNotes>
+		<VersionPrefix>1.1.0</VersionPrefix>
+		<Preview></Preview>
+		<VersionSuffix Condition="'$(Preview)' != ''">$(Preview).$([System.DateTime]::get_Now().get_Year())$([System.DateTime]::get_Now().get_Month().ToString("D2"))$([System.DateTime]::get_Now().get_Day().ToString("D2"))-$([System.DateTime]::get_Now().get_Hour().ToString("D2"))$([System.DateTime]::get_Now().get_Minute().ToString("D2"))</VersionSuffix>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RootNamespace>Smab.Calendar</RootNamespace>
+		<Product>Smab.Calendar</Product>
+		<AssemblyName>Smab.Calendar</AssemblyName>
+	</PropertyGroup>
 
 
 </Project>

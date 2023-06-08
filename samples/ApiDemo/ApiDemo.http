@@ -1,0 +1,33 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@host=https://localhost:7065
+
+# You can use the Query string parameter COMMAND to get the desired response
+
+GET {{host}}/calendar/Test%20League
+###
+
+GET {{host}}/calendar/Test%20League?command=json
+###
+
+GET {{host}}/calendar/Test%20League?command=text
+###
+
+GET {{host}}/calendar/Test%20League?command=file
+###
+
+# You can use the Accept header to get the desired response
+
+GET {{host}}/calendar/Test%20League
+Accept: text/calendar
+
+###
+
+GET {{host}}/calendar/Test%20League
+Accept: application/json
+
+###
+
+GET {{host}}/calendar/Test%20League
+Accept: text/plain
+
+###

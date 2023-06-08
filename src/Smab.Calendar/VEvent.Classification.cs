@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Smab.Calendar;
 
-namespace Smab.Calendar
+public partial class VEvent
 {
-	public partial class VEvent
+	public enum Classification
 	{
-		public enum Classification
-		{
-			PUBLIC,
-			PRIVATE,
-			CONFIDENTIAL
-		}
+		PUBLIC,
+		PRIVATE,
+		CONFIDENTIAL
 	}
 }
