@@ -49,7 +49,7 @@ public partial class VEvent
 	// Either way - this is a workaround to put the \n literal sequence back into the string
 	public string Description {
 		get => _description;
-		set => _description = value.Replace("\n", @"\n");
+		set => _description = value.Replace("\r\n", @"\n").Replace("\n", @"\n");
 	}
 
 	public TransparencyType Transparency { get; set; } = TransparencyType.OPAQUE;

@@ -7,6 +7,6 @@ public partial class VEvent
 		NoPriority = 0,
 		High = 1,
 		Normal = 5,
-		Lopw = 9
+		Low = 9
 	}
 }
