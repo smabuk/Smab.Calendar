@@ -8,25 +8,30 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<PackageReleaseNotes>Package refresh</PackageReleaseNotes>
+		<VersionPrefix>1.1.1</VersionPrefix>
+		<Preview></Preview>
+		<VersionSuffix Condition="'$(Preview)' != '' And '$(BUILD_BUILDNUMBER)' == ''">$(Preview).$([System.DateTime]::get_Now().get_Year())$([System.DateTime]::get_Now().get_Month().ToString("D2"))$([System.DateTime]::get_Now().get_Day().ToString("D2"))-$([System.DateTime]::get_Now().get_Hour().ToString("D2"))$([System.DateTime]::get_Now().get_Minute().ToString("D2"))</VersionSuffix>
+		<VersionSuffix Condition="'$(Preview)' != '' And '$(BUILD_BUILDNUMBER)' != ''">$(Preview).$(BUILD_BUILDNUMBER)</VersionSuffix>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<PackageId>Smab.Calendar</PackageId>
 		<Title>Smab.Calendar</Title>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Product>Smab.Calendar</Product>
 		<Authors>Simon Brookes (@smabuk)</Authors>
+		<Copyright>Simon Brookes (@smabuk)</Copyright>
 		<Company></Company>
+		<AssemblyName>Smab.Calendar</AssemblyName>
+		<RootNamespace>Smab.Calendar</RootNamespace>
 		<Description>Package to create ical format streams</Description>
 		<Summary>Package to create ical format streams</Summary>
 		<PackageProjectUrl>https://github.com/smabuk/Smab.Calendar</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/smabuk/Smab.Calendar</RepositoryUrl>
-		<PackageTags>calendar, ical</PackageTags>
-		<PackageReleaseNotes>Language update</PackageReleaseNotes>
-		<VersionPrefix>1.1.0</VersionPrefix>
-		<Preview></Preview>
-		<VersionSuffix Condition="'$(Preview)' != ''">$(Preview).$([System.DateTime]::get_Now().get_Year())$([System.DateTime]::get_Now().get_Month().ToString("D2"))$([System.DateTime]::get_Now().get_Day().ToString("D2"))-$([System.DateTime]::get_Now().get_Hour().ToString("D2"))$([System.DateTime]::get_Now().get_Minute().ToString("D2"))</VersionSuffix>
+		<PackageTags>calendar, ical, ics, outlook</PackageTags>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<RootNamespace>Smab.Calendar</RootNamespace>
-		<Product>Smab.Calendar</Product>
-		<AssemblyName>Smab.Calendar</AssemblyName>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
-
 
 </Project>
