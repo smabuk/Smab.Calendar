@@ -78,86 +78,86 @@ public partial class VEvent
 	/// </summary>
 	public string Categories { get; set; } = "";
 
-	public List<VAlarm> Alarms { get; set; } = new List<VAlarm>();
+	public List<VAlarm> Alarms { get; set; } = [];
 
 	public override string ToString()
 	{
-		StringBuilder result = new StringBuilder();
+		StringBuilder result = new();
 
-		result.Append("BEGIN:VEVENT");
-		result.Append(Constants.CrLf);
+		_ = result.Append("BEGIN:VEVENT");
+		_ = result.Append(CrLf);
 
-		result.Append("UID:");
-		result.Append(UID);
-		result.Append(Constants.CrLf);
+		_ = result.Append("UID:");
+		_ = result.Append(UID);
+		_ = result.Append(CrLf);
 
-		result.Append("TITLE:");
-		result.Append(Summary);
-		result.Append(Constants.CrLf);
+		_ = result.Append("TITLE:");
+		_ = result.Append(Summary);
+		_ = result.Append(CrLf);
 
-		result.Append("SUMMARY:");
-		result.Append(Summary);
-		result.Append(Constants.CrLf);
+		_ = result.Append("SUMMARY:");
+		_ = result.Append(Summary);
+		_ = result.Append(CrLf);
 
-		result.Append("PRIORITY:");
-		result.Append((int)Priority);
-		result.Append(Constants.CrLf);
+		_ = result.Append("PRIORITY:");
+		_ = result.Append((int)Priority);
+		_ = result.Append(CrLf);
 
 		if (!string.IsNullOrWhiteSpace(Organizer)) {
-			result.Append("ORGANIZER:");
-			result.Append(Organizer);
-			result.Append(Constants.CrLf);
+			_ = result.Append("ORGANIZER:");
+			_ = result.Append(Organizer);
+			_ = result.Append(CrLf);
 		}
 
-		result.Append("TRANSP:");
-		result.Append(Transparency.ToString());
-		result.Append(Constants.CrLf);
+		_ = result.Append("TRANSP:");
+		_ = result.Append(Transparency.ToString());
+		_ = result.Append(CrLf);
 
-		result.Append("X-MICROSOFT-CDO-BUSYSTATUS:");
-		result.Append(OutlookBusyStatus.ToString());
-		result.Append(Constants.CrLf);
+		_ = result.Append("X-MICROSOFT-CDO-BUSYSTATUS:");
+		_ = result.Append(OutlookBusyStatus.ToString());
+		_ = result.Append(CrLf);
 
-		result.Append("LOCATION:");
-		result.Append(Location);
-		result.Append(Constants.CrLf);
+		_ = result.Append("LOCATION:");
+		_ = result.Append(Location);
+		_ = result.Append(CrLf);
 
 		//result.Append("X-MICROSOFT-CDO-ALLDAYEVENT:");
 		//result.Append(Constants.CrLf);
 
-		result.Append("DTSTART:");
-		result.Append(DateStart.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
-		result.Append(Constants.CrLf);
+		_ = result.Append("DTSTART:");
+		_ = result.Append(DateStart.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
+		_ = result.Append(CrLf);
 
-		result.Append("DTEND:");
-		result.Append(DateEnd.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
-		result.Append(Constants.CrLf);
+		_ = result.Append("DTEND:");
+		_ = result.Append(DateEnd.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
+		_ = result.Append(CrLf);
 
-		result.Append("DTSTAMP:");
-		result.Append(TimeStamp.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
-		result.Append(Constants.CrLf);
+		_ = result.Append("DTSTAMP:");
+		_ = result.Append(TimeStamp.ToUniversalTime().ToString(@"yyyyMMdd\THHmmss\Z"));
+		_ = result.Append(CrLf);
 
-		result.Append("DESCRIPTION:");
-		result.Append(Description);
-		result.Append(Constants.CrLf);
+		_ = result.Append("DESCRIPTION:");
+		_ = result.Append(Description);
+		_ = result.Append(CrLf);
 
 		if (!string.IsNullOrWhiteSpace(Categories)) {
-			result.Append("CATEGORIES:");
-			result.Append(Categories);
-			result.Append(Constants.CrLf);
+			_ = result.Append("CATEGORIES:");
+			_ = result.Append(Categories);
+			_ = result.Append(CrLf);
 		}
 
 		if (!string.IsNullOrWhiteSpace(URL)) {
-			result.Append("URL:");
-			result.Append(URL);
-			result.Append(Constants.CrLf);
+			_ = result.Append("URL:");
+			_ = result.Append(URL);
+			_ = result.Append(CrLf);
 		}
 
 		foreach (var alarm in Alarms) {
-			result.Append(alarm.ToString());
+			_ = result.Append(alarm.ToString());
 		}
 
-		result.Append("END:VEVENT");
-		result.Append(Constants.CrLf);
+		_ = result.Append("END:VEVENT");
+		_ = result.Append(CrLf);
 
 		return result.ToString();
 	}

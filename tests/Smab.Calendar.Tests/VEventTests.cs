@@ -26,7 +26,7 @@ public class VEventTests
 			""";
 		string[] expectedArray = expected.Split(Environment.NewLine);
 
-		VEvent vEvent = new VEvent();
+		VEvent vEvent = new();
 		string actual = vEvent.ToString();
 		string[] actualArray = actual.Split(Environment.NewLine);
 		
@@ -35,6 +35,7 @@ public class VEventTests
 			if (line.StartsWith("DTSTAMP")) {
 				continue;
 			}
+
 			Assert.Equal(expectedArray[i], actualArray[i]);
 		}
 	}
@@ -74,7 +75,7 @@ public class VEventTests
 			"""
 			.Split(Environment.NewLine);
 
-		VEvent vEvent = new VEvent
+		VEvent vEvent = new()
 		{
 			UID = guid.ToString(),
 			Summary = summary,
@@ -96,6 +97,7 @@ public class VEventTests
 			if (line.StartsWith("DTSTAMP")) {
 				continue;
 			}
+
 			Assert.Equal(expected[i], actual[i]);
 		}
 	}

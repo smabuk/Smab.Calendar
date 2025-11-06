@@ -14,42 +14,43 @@ public class IcalCalendar
 	/// Defaults to 1440 minutes (1 day)
 	/// </summary>
 	public int      TimeToLive { get; set; } = 1440;
-	public List<VEvent> Events { get; set; } = new List<VEvent>();
+	public List<VEvent> Events { get; set; } = [];
 
 	public override string ToString()
 	{
-		StringBuilder result = new StringBuilder();
+		StringBuilder result = new();
 
-		result.Append("BEGIN:VCALENDAR");
-		result.Append(Constants.CrLf);
+		_ = result.Append("BEGIN:VCALENDAR");
+		_ = result.Append(CrLf);
 
-		result.Append("PRODID:");
-		result.Append(ProductId);
-		result.Append(Constants.CrLf);
+		_ = result.Append("PRODID:");
+		_ = result.Append(ProductId);
+		_ = result.Append(CrLf);
 
 		//The following two lines seem to be required by Outlook to get the alarm settings (Version and Method)
-		result.Append("VERSION:2.0");
-		result.Append(Constants.CrLf);
-		result.Append("METHOD:PUBLISH");
-		result.Append(Constants.CrLf);
+		_ = result.Append("VERSION:2.0");
+		_ = result.Append(CrLf);
+		_ = result.Append("METHOD:PUBLISH");
+		_ = result.Append(CrLf);
 
-		result.Append("X-WR-CALNAME:");
-		result.Append(Name);
-		result.Append(Constants.CrLf);
+		_ = result.Append("X-WR-CALNAME:");
+		_ = result.Append(Name);
+		_ = result.Append(CrLf);
 
-		result.Append("X-WR-CALDESC:");
-		result.Append(Description);
-		result.Append(Constants.CrLf);
+		_ = result.Append("X-WR-CALDESC:");
+		_ = result.Append(Description);
+		_ = result.Append(CrLf);
 
-		result.Append("X-PUBLISHED-TTL:PT");
-		result.Append(TimeToLive.ToString());
-		result.Append("M");
-		result.Append(Constants.CrLf);
+		_ = result.Append("X-PUBLISHED-TTL:PT");
+		_ = result.Append(TimeToLive);
+		_ = result.Append('M');
+		_ = result.Append(CrLf);
 
 		foreach (var evnt in Events) {
-			result.Append(evnt.ToString());
+			_ = result.Append(evnt.ToString());
 		}
-		result.Append("END:VCALENDAR");
+
+		_ = result.Append("END:VCALENDAR");
 
 		return result.ToString();
 	}

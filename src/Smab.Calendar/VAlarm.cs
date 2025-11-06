@@ -33,31 +33,31 @@ public partial class VAlarm
 
 	public override string ToString()
 	{
-		StringBuilder result = new StringBuilder();
+		StringBuilder result = new();
 
-		result.Append("BEGIN:VALARM");
-		result.Append(Constants.CrLf);
+		_ = result.Append("BEGIN:VALARM");
+		_ = result.Append(CrLf);
 
-		result.Append("TRIGGER:-P");
-		result.Append("T");
-		result.Append(Trigger.Days);
-		result.Append("D");
-		result.Append(Trigger.Hours);
-		result.Append("H");
-		result.Append(Trigger.Minutes);
-		result.Append("M");
-		result.Append(Constants.CrLf);
+		_ = result.Append("TRIGGER:-P");
+		_ = result.Append('T');
+		_ = result.Append(Trigger.Days);
+		_ = result.Append('D');
+		_ = result.Append(Trigger.Hours);
+		_ = result.Append('H');
+		_ = result.Append(Trigger.Minutes);
+		_ = result.Append('M');
+		_ = result.Append(CrLf);
 
-		result.Append("ACTION:");
-		result.Append(Action.ToString());
-		result.Append(Constants.CrLf);
+		_ = result.Append("ACTION:");
+		_ = result.Append(Action.ToString());
+		_ = result.Append(CrLf);
 
-		result.Append("DESCRIPTION:");
-		result.Append(Description);
-		result.Append(Constants.CrLf);
+		_ = result.Append("DESCRIPTION:");
+		_ = result.Append(Description);
+		_ = result.Append(CrLf);
 
-		result.Append("END:VALARM");
-		result.Append(Constants.CrLf);
+		_ = result.Append("END:VALARM");
+		_ = result.Append(CrLf);
 
 		return result.ToString();
 	}
