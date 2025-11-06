@@ -40,11 +40,11 @@ public partial class VAlarm
 
 		_ = result.Append("TRIGGER:-P");
 		_ = result.Append('T');
-		_ = result.Append(Trigger.Days);
+		_ = result.Append(int.Abs(Trigger.Days));
 		_ = result.Append('D');
-		_ = result.Append(Trigger.Hours);
+		_ = result.Append(int.Abs(Trigger.Hours));
 		_ = result.Append('H');
-		_ = result.Append(Trigger.Minutes);
+		_ = result.Append(int.Abs(Trigger.Minutes));
 		_ = result.Append('M');
 		_ = result.Append(CrLf);
 
